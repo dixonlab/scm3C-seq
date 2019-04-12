@@ -18,9 +18,9 @@ for i in dfh:
         if line[3][:2]=='CG':
                 if 'chr'+line[0] in chro_order:
                         if chro_order.index('chr'+line[0])>=10:
-                                index=str(chro_order.index('chr'+line[0])*1000000000+int(line[1]))
+                                index=str(chro_order.index('chr'+line[0])*10000000000+int(line[1]))
                         if chro_order.index('chr'+line[0])<10:
-                                index='0'+str(chro_order.index('chr'+line[0])*1000000000+int(line[1]))
+                                index='0'+str(chro_order.index('chr'+line[0])*10000000000+int(line[1]))
                         rfh.write(index+'_'+'chr'+'_'.join(line[0:4])+'\t'+str(100*float(line[4])/float(line[5]))+'('+line[4]+','+line[5]+')\n')
 rfh.close()
 os.system('sort -k 1b,1 '+fn.split('/')[-1]+'_CpG_mod_temp.txt > '+fn.split('/')[-1]+'_CpG_mod.txt')
@@ -41,9 +41,9 @@ for i in dfh:
         if line[3][:2]=='CG':
                 if 'chr'+line[0] in chro_order:
                         if chro_order.index('chr'+line[0])>=10:
-                                index=str(chro_order.index('chr'+line[0])*1000000000+int(line[1]))
+                                index=str(chro_order.index('chr'+line[0])*10000000000+int(line[1]))
                         if chro_order.index('chr'+line[0])<10:
-                                index='0'+str(chro_order.index('chr'+line[0])*1000000000+int(line[1]))
+                                index='0'+str(chro_order.index('chr'+line[0])*10000000000+int(line[1]))
                         rfh.write(index+'_'+'chr'+'_'.join(line[0:4])+'\t'+str(100*float(line[4])/float(line[5]))+'('+line[4]+','+line[5]+')\n')
 rfh.close()
 os.system('sort -k 1b,1 '+fn.split('/')[-1]+'_CpG_mod_temp.txt > '+fn.split('/')[-1]+'_CpG_mod.txt')
