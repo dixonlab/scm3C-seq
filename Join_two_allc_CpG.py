@@ -12,7 +12,7 @@ fn=sys.argv[1]
 dfh=gzip.open(fn,'r')
 rfh=open(fn.split('/')[-1]+'_CpG_mod_temp.txt','w')
 sample=fn.split('_')[4]+'_'+fn.split('_')[9]+'_'+fn.split('_')[10]+'_'+fn.split('_')[11].replace('indexed','')
-rfh.write('00000000000_Sample\t'+sample+'\n')
+rfh.write('000000000000_Sample\t'+sample+'\n')
 for i in dfh:
         line=i.split()
         if line[3][:2]=='CG':
@@ -35,7 +35,7 @@ dfh=gzip.open(fn,'r')
 dfh=gzip.open(fn,'r')
 rfh=open(fn.split('/')[-1]+'_CpG_mod_temp.txt','w')
 sample=fn.split('_')[4]+'_'+fn.split('_')[9]+'_'+fn.split('_')[10]+'_'+fn.split('_')[11].replace('indexed','')
-rfh.write('00000000000_Sample\t'+sample+'\n')
+rfh.write('000000000000_Sample\t'+sample+'\n')
 for i in dfh:
         line=i.split()
         if line[3][:2]=='CG':
@@ -49,4 +49,4 @@ rfh.close()
 os.system('sort -k 1b,1 '+fn.split('/')[-1]+'_CpG_mod_temp.txt > '+fn.split('/')[-1]+'_CpG_mod.txt')
 os.system('rm '+fn.split('/')[-1]+'_CpG_mod_temp.txt')
 os.system("join -a1 -a2 -e 'NA' -o 0,1.2,2.2 "+fn1.split('/')[-1]+'_CpG_mod.txt '+fn2.split('/')[-1]+'_CpG_mod.txt > '+sys.argv[3])
-#os.system("rm "+fn1.split('/')[-1]+'_CpG_mod.txt '+fn2.split('/')[-1]+'_CpG_mod.txt')
+os.system("rm "+fn1.split('/')[-1]+'_CpG_mod.txt '+fn2.split('/')[-1]+'_CpG_mod.txt')
