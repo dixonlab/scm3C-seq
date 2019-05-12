@@ -10,6 +10,9 @@ Requirements:
 
   Cooler:
     Please see https://github.com/mirnylab/cooler for installation and details
+  
+  hicrep:
+    Please see https://bioconductor.org/packages/release/bioc/html/hicrep.html for installation and details
 
 Visualization:
   We use Higlass (https://github.com/higlass/higlass) for visualizing contact matrix map
