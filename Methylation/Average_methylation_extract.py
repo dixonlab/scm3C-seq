@@ -24,8 +24,8 @@ for q in ref:
         pre=target_start
         if target_start in index:
                 a=target_start
-                data=map(lambda x:x[a:],data)
-                index=index[a:]
+                data=map(lambda x:x[index.index(a):],data)
+                index=index[index.index(a):]
         if target_start not in index:
                 data=[]
                 index=[]
