@@ -16,3 +16,8 @@ Requirements:
 
 Visualization:
   We use Higlass (https://github.com/higlass/higlass) for visualizing contact matrix map
+
+We have made the processed data available through a public box directory located here:
+https://salkinstitute.box.com/s/fp63a4j36m5k255dhje3zcj5kfuzkyj1
+
+
